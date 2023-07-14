@@ -1,8 +1,39 @@
-﻿
+﻿@model List<Discount>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
-<h1>İndirimler</h1>
+<h1 class="d-flex justify-content-center">İndirimler Sayfası</h1>
 
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İndirim Kodu</th>
+        <th>Hak</th>
+        <th>Kupon Geçerlilik Tarihi</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        if (item.EndingDate < DateTime.Now)
+        {
+            <tr style="background-color:orangered">
+                <td>@count</td>
+                <td>@item.DiscountCode</td>
+                <td>@item.DiscountCount</td>
+                <td>@(((DateTime)item.EndingDate).ToString("dd-MMM-yyyy"))</td>
+            </tr>
+        }
+        else
+        {
+            <tr style="background-color:greenyellow">
+                <td>@count</td>
+                <td>@item.DiscountCode</td>
+                <td>@item.DiscountCount</td>
+                <td>@(((DateTime)item.EndingDate).ToString("dd-MMM-yyyy"))</td>
+            </tr>
+        }
+    }
+</table>

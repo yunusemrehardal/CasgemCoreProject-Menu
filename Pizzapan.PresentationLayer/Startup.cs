@@ -29,12 +29,22 @@ namespace Pizzapan.PresentationLayer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Context>();
+
             services.AddScoped<ITestimonialService, TestimonialManager>();
-            services.AddScoped<ICategoryService, CategoryManager>();
-            services.AddScoped<IProductService, ProductManager>();
-            services.AddScoped<ICategoryDal, EfCategoryDal>();
             services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+
+            services.AddScoped<IContactService, ContactManager>();
+            services.AddScoped<IContactDal, EfContactDal>();
+
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+
+            services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();
+
+            services.AddScoped<IDiscountService, DiscountManager>();
+            services.AddScoped<IDiscountDal, EfDiscountDal>();
+
             services.AddControllersWithViews();
         }
 

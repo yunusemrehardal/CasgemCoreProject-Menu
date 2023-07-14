@@ -19,18 +19,6 @@ namespace Pizzapan.PresentationLayer.Controllers
             return View(values);
         }
 
-        [HttpGet]
-        public IActionResult AddCategory()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult AddCategory(Category category)
-        {
-           _categoryService.TInsert(category);
-            return RedirectToAction("Index");
-        }
-
         public IActionResult DeleteCategory(int id)
         {
             var value = _categoryService.TGetByID(id);

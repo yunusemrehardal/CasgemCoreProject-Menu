@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pizzapan.BusinessLayer.Abstract
 {
-    public interface IProductService : IGenericService<Product>
+    public interface IDiscountService : IGenericService<Discount>
     {
-        public List<Product> TGetProductswithCategory();
     }
 }

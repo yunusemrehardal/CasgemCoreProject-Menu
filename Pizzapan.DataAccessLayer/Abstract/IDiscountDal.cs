@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizzapan.BusinessLayer.Abstract
+namespace Pizzapan.DataAccessLayer.Abstract
 {
-    public interface IProductService : IGenericService<Product>
+    public interface IDiscountDal : IGenericDal<Discount>
     {
-        public List<Product> TGetProductswithCategory();
     }
 }

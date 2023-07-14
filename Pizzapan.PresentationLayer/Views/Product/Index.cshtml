@@ -12,8 +12,8 @@
         <th>#</th>
         <th>Ürün Adı</th>
         <th>Ürün Açıklaması</th>
-        <th>Ücret</th>
         <th>Ürün Kategorisi</th>
+        <th>Ücret</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
@@ -23,8 +23,8 @@
             <td>@item.ProductID</td>
             <td>@item.Name</td>
             <td>@item.Description</td>
+            <td>@item.Category.CategoryName</td>
             <td>@item.Price</td>
-            <td>@item.CategoryID</td>
             <td><a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-outline-danger">Sil</a></td>
             <td><a href="/Product/UpdateProduct/@item.ProductID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
