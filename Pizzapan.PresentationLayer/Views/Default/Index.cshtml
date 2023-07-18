@@ -1,4 +1,4 @@
-﻿
+﻿﻿
 @{
     Layout = null;
 }
@@ -10,60 +10,11 @@ Author URL: http://w3layouts.com
 <!doctype html>
 <html lang="en">
 
-    @await Component.InvokeAsync("_HeadPartial")
-    
+@await Component.InvokeAsync("_HeadPartial")
+
 <body>
     <!--header-->
-    <div class="w3l-top-header">
-        <header id="site-header" class="fixed-top">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-dark stroke">
-                    <a class="navbar-brand" href="index.html">
-                        <span class="fa fa-pie-chart"></span> Pizza pan
-                    </a>
-                    <!-- if logo is image enable this
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                    </a> -->
-                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                        </span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item @@index-active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item @@about-active">
-                                <a class="nav-link effect-3" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item @@services-active">
-                                <a class="nav-link effect-3" href="services.html">Menu</a>
-                            </li>
-                            <li class="nav-item @@contact-active">
-                                <a class="nav-link effect-3" href="contact.html">Contact</a>
-                            </li>
-                            <li class="px-4 fill-none">
-                                <a href="#url" class="btn btn-style btn-secondary">Online Order</a>
-                            </li>
-                        </ul>
-                        <div class="popup">
-                            <a href="#domain" class="domain" data-toggle="modal" data-target="#DomainModal">
-                                <div class="hamburger1">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    </div>
+    @await Component.InvokeAsync("_NavbarPartial")
     <!--/header-->
     <!-- Domain Modal -->
     <div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
@@ -124,27 +75,7 @@ Author URL: http://w3layouts.com
         <!-- //modal-dialog -->
     </div>
     <!-- //Domain modal -->
-    <section class="w3l-banner" id="banner">
-        <div class="new-block py-5">
-            <div class="container">
-                <div class="row middle-section">
-                    <div class="col-lg-7 section-width align-self">
-                        <h5>Eat pizza everyday</h5>
-                        <h2>Share your love for pizza</h2>
-                        <a href="#url" class="btn btn-secondary btn-outline-style mt-md-5 mt-4">
-                            <span class="fa fa-shopping-cart mr-2"></span> Order Online
-                        </a>
-                    </div>
-                    <div class="col-lg-5 history-info mt-lg-0 mt-5 pt-lg-0 pt-md-4">
-                        <img src="assets/images/pizza-full.png" class="img-fluid" alt="image">
-                        <div class="cost">
-                            <h5>Only</h5>
-                            <h3>$25</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+    @await Component.InvokeAsync("_FeaturePartial")
     <!-- iphone home block -->
     <section class="w3l-about py-5">
         <div class="container py-lg-5 py-md-4">
@@ -165,19 +96,19 @@ Author URL: http://w3layouts.com
                 <div class="col-lg-6 mt-lg-0 mt-5">
                     <div class="row">
                         <div class="col-6 features-with-17-left1">
-                            <a href="#url" class="icon"><img src="assets/images/pizza.png" alt="" /></a>
+                            <a href="#url" class="icon"><img src="/pizzapan-starter/assets/images/pizza.png" alt="" /></a>
                             <h4><a href="#url">Right food baked with natural ingredient</a></h4>
                         </div>
                         <div class="col-6 features-with-17-left1">
-                            <a href="#url" class="icon"><img src="assets/images/burger.png" alt="" /></a>
+                            <a href="#url" class="icon"><img src="/pizzapan-starter/assets/images/burger.png" alt="" /></a>
                             <h4><a href="#url">The use of natural best quality products</a></h4>
                         </div>
                         <div class="col-6 features-with-17-left1 mt-5 pt-lg-3">
-                            <a href="#url" class="icon"><img src="assets/images/drink.png" alt="" /></a>
+                            <a href="#url" class="icon"><img src="/pizzapan-starter/assets/images/drink.png" alt="" /></a>
                             <h4><a href="#url"> World’s best Chef and Nutritionist!</a></h4>
                         </div>
                         <div class="col-6 features-with-17-left1 mt-5 pt-lg-3">
-                            <a href="#url" class="icon"><img src="assets/images/fries.png" alt="" /></a>
+                            <a href="#url" class="icon"><img src="/pizzapan-starter/assets/images/fries.png" alt="" /></a>
                             <h4><a href="#url">Fastest delivery on your door step</a></h4>
                         </div>
                     </div>
@@ -206,7 +137,7 @@ Author URL: http://w3layouts.com
                     <a href="#url" class="btn-style btn-primary btn mt-lg-5 mt-4"><span class="fa fa-book mr-2"></span> Learn More</a>
                 </div>
                 <div class="col-lg-4 mt-lg-0 mt-5">
-                    <img src="assets/images/a1.jpg" class="img-fluid radius-image" alt="image">
+                    <img src="/pizzapan-starter/assets/images/a1.jpg" class="img-fluid radius-image" alt="image">
                 </div>
             </div>
         </div>
@@ -223,7 +154,7 @@ Author URL: http://w3layouts.com
                         <a href="assets/images/g6.jpg" data-lightbox="example-set"
                            data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/g6.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="/pizzapan-starter/assets/images/g6.jpg" alt="product" class="img-fluid radius-image">
                             </figure>
                         </a>
                     </div>
@@ -231,13 +162,13 @@ Author URL: http://w3layouts.com
                         <a href="assets/images/g1.jpg" data-lightbox="example-set" class="mb-4"
                            data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/g1.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="/pizzapan-starter/assets/images/g1.jpg" alt="product" class="img-fluid radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/g2.jpg" data-lightbox="example-set"
                            data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/g2.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="/pizzapan-starter/assets/images/g2.jpg" alt="product" class="img-fluid radius-image">
                             </figure>
                         </a>
                     </div>
@@ -245,13 +176,13 @@ Author URL: http://w3layouts.com
                         <a href="assets/images/g3.jpg" data-lightbox="example-set" class="mb-4"
                            data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/g3.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="/pizzapan-starter/assets/images/g3.jpg" alt="product" class="img-fluid radius-image">
                             </figure>
                         </a>
                         <a href="assets/images/g6.jpg" data-lightbox="example-set"
                            data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/g6.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="/pizzapan-starter/assets/images/g6.jpg" alt="product" class="img-fluid radius-image">
                             </figure>
                         </a>
                     </div>
@@ -259,7 +190,7 @@ Author URL: http://w3layouts.com
                         <a href="assets/images/g1.jpg" data-lightbox="example-set"
                            data-title="lorem ipsum dolor sit amet">
                             <figure>
-                                <img src="assets/images/g1.jpg" alt="product" class="img-fluid radius-image">
+                                <img src="/pizzapan-starter/assets/images/g1.jpg" alt="product" class="img-fluid radius-image">
                             </figure>
                         </a>
                     </div>
@@ -267,169 +198,10 @@ Author URL: http://w3layouts.com
             </div>
         </div>
     </section>
-    <section class="w3l-food" id="food">
-        <div class="foods1 py-5">
-            <div class="container py-lg-5 py-md-4">
-                <div class="title-content text-center">
-                    <h6 class="sub-title">Special Combo</h6>
-                    <h3 class="title-big">Our Delicious Pizza</h3>
-                </div>
-                <div class="foods1-content mt-lg-5 mt-4 mb-sm-0 mb-4">
-                    <div class="owl-carousel owl-theme text-center">
-                        <div class="item">
-                            <div class="d-grid food-info">
-                                <div class="column">
-                                    <h4 class="name-pos"><a href="#url">Margherita</a></h4>
-                                    <p>Tomato sauce, mozzarella, & oregano</p>
-                                    <h5>20$</h5>
-                                    <a href="#url" class="btn-style btn-primary btn mt-4">Order Online</a>
-                                    <a href="#url"><img src="assets/images/p1.jpg" alt="" class="img-fluid radius-image mt-4" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="d-grid food-info">
-                                <div class="column">
-                                    <h4 class="name-pos"><a href="#url">Carbonara</a></h4>
-                                    <p>Tomato sauce, eggs, and bacon</p>
-                                    <h5>20$</h5>
-                                    <a href="#url" class="btn-style btn-primary btn mt-4">Order Online</a>
-                                    <a href="#url"><img src="assets/images/p2.jpg" alt="" class="img-fluid radius-image mt-4" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="d-grid food-info">
-                                <div class="column">
-                                    <h4 class="name-pos"><a href="#url">Schiacciata</a></h4>
-                                    <p> Olive oil, ham and rosemary</p>
-                                    <h5>20$</h5>
-                                    <a href="#url" class="btn-style btn-primary btn mt-4">Order Online</a>
-                                    <a href="#url"><img src="assets/images/p3.jpg" alt="" class="img-fluid radius-image mt-4" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="d-grid food-info">
-                                <div class="column">
-                                    <h4 class="name-pos"><a href="#url">Prosciutto e Funghi</a></h4>
-                                    <p>Tomato sauce, ham, and mushrooms</p>
-                                    <h5>20$</h5>
-                                    <a href="#url" class="btn-style btn-primary btn mt-4">Order Online</a>
-                                    <a href="#url"><img src="assets/images/p4.jpg" alt="" class="img-fluid radius-image mt-4" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="d-grid food-info">
-                                <div class="column">
-                                    <h4 class="name-pos"><a href="#url">Mediterranea</a></h4>
-                                    <p>Tomato sauce, cherry tomatoes and pepper</p>
-                                    <h5>20$</h5>
-                                    <a href="#url" class="btn-style btn-primary btn mt-4">Order Online</a>
-                                    <a href="#url"><img src="assets/images/p5.jpg" alt="" class="img-fluid radius-image mt-4" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @await Component.InvokeAsync("_ProductPartial")
 
     <!--/testimonials-->
-    <section class="w3l-testimonials" id="testimonials">
-        <div class="testimonials py-5">
-            <div class="container py-lg-5 py-md-4">
-                <div class="title-content text-center">
-                    <h6 class="sub-title">Testimonials</h6>
-                    <h3 class="title-big">What our Clients say</h3>
-                </div>
-                <div class="row mt-lg-5 mt-4">
-                    <div class="col-md-12 mx-auto">
-                        <div class="owl-two owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="slider-info">
-                                    <div class="message">
-                                        <span class="fa fa-quote-left"></span>
-                                        <h5>
-                                            Lorem ipsum dolor sit amet consect etur adipisicing elit. Ea sit id
-                                            officia quod quasi necess itatibus Harum necess itatibus
-                                            error dam tenetur dolor elit sed init amet.
-                                        </h5>
-                                        <div class="name mt-4">
-                                            <h4>Phillip Hunt</h4>
-                                            <p>CEO, Zomato</p>
-                                        </div>
-                                    </div>
-                                    <div class="img-circle">
-                                        <img src="assets/images/client1.jpg" class="img-fluid testimonial-img radius-image" alt="client">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slider-info">
-                                    <div class="message">
-                                        <span class="fa fa-quote-left"></span>
-                                        <h5>
-                                            Lorem ipsum dolor sit amet consect etur adipisicing elit. Ea sit id
-                                            officia quod quasi necess itatibus Harum necess itatibus
-                                            error dam tenetur dolor elit sed init amet.
-                                        </h5>
-                                        <div class="name mt-4">
-                                            <h4>Sara Grant</h4>
-                                            <p>Example Company</p>
-                                        </div>
-                                    </div>
-                                    <div class="img-circle">
-                                        <img src="assets/images/client2.jpg" class="img-fluid testimonial-img radius-image" alt="client">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slider-info">
-                                    <div class="message">
-                                        <span class="fa fa-quote-left"></span>
-                                        <h5>
-                                            Lorem ipsum dolor sit amet consect etur adipisicing elit. Ea sit id
-                                            officia quod quasi necess itatibus Harum necess itatibus
-                                            error dam tenetur dolor elit sed init amet.
-                                        </h5>
-                                        <div class="name mt-4">
-                                            <h4>Luke Jacobs</h4>
-                                            <p>Example Company</p>
-                                        </div>
-                                    </div>
-                                    <div class="img-circle">
-                                        <img src="assets/images/client3.jpg" class="img-fluid testimonial-img radius-image" alt="client">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slider-info mt-lg-4 mt-3">
-                                    <div class="message">
-                                        <span class="fa fa-quote-left"></span>
-                                        <h5>
-                                            Lorem ipsum dolor sit amet consect etur adipisicing elit. Ea sit id
-                                            officia quod quasi necess itatibus Harum necess itatibus
-                                            error dam tenetur dolor elit sed init amet.
-                                        </h5>
-                                        <div class="name mt-4">
-                                            <h4>Claire Olson</h4>
-                                            <p>Example Company</p>
-                                        </div>
-                                    </div>
-                                    <div class="img-circle">
-                                        <img src="assets/images/client4.jpg" class="img-fluid testimonial-img radius-image" alt="client">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @await Component.InvokeAsync("_TestimonialPartial")
     <!--//testimonials-->
     <!-- footers 20 -->
     <section class="w3l-footers-20">
@@ -513,15 +285,15 @@ Author URL: http://w3layouts.com
     </section>
 
     <!-- jQuery and Bootstrap JS -->
-    <script src="~/pizzapan-starter/assets/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/pizzapan-starter/assets/js/jquery-3.3.1.min.js"></script>
 
     <!-- libhtbox -->
-    <script src="~/pizzapan-starter/assets/assets/js/lightbox-plus-jquery.min.js"></script>
+    <script src="~/pizzapan-starter/assets/js/lightbox-plus-jquery.min.js"></script>
 
 
-    <script src="~/pizzapan-starter/assets/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/pizzapan-starter/assets/js/jquery.magnific-popup.min.js"></script>
 
-    <script src="~/pizzapan-starter/assets/assets/js/counter.js"></script>
+    <script src="~/pizzapan-starter/assets/js/counter.js"></script>
     <script>
         $(document).ready(function () {
             $('.popup-with-zoom-anim').magnificPopup({
@@ -559,7 +331,7 @@ Author URL: http://w3layouts.com
     </script>
 
     <!-- testimonials owlcarousel -->
-    <script src="~/pizzapan-starter/assets/assets/js/owl.carousel.js"></script>
+    <script src="~/pizzapan-starter/assets/js/owl.carousel.js"></script>
     <script>
         $(document).ready(function () {
             $('.owl-two').owlCarousel({
@@ -663,7 +435,7 @@ Author URL: http://w3layouts.com
         });
     </script>
     <!--//MENU-JS-->
-    <script src="~/pizzapan-starter/assets/assets/js/bootstrap.min.js"></script>
+    <script src="~/pizzapan-starter/assets/js/bootstrap.min.js"></script>
 
 </body>
 

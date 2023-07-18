@@ -18,5 +18,6 @@ namespace Pizzapan.DataAccessLayer.EntityFramework
             var values = context.Contacts.Where(x=>x.Subject == "Teşekkür").ToList();
             return values;
         }
+
     }
 }
