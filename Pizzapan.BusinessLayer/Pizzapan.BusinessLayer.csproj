@@ -8,7 +8,11 @@
     <Folder Include="Login\" />
     <Folder Include="Extensions\" />
     <Folder Include="Messages\" />
-    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
   </ItemGroup>
 
   <ItemGroup>
