@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "CategoryProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori Adı</th>
+        <th>Ürün Adı</th>
+    </tr>
+    @foreach (var category in Model)
+    {
+        <tr>
+            <td>@category.CategoryName</td>
+            <td>
+                <ul>
+                    @foreach (var product in category.Products)
+                    {
+                        <li>@product.Name</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+</table>

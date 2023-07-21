@@ -1,0 +1,19 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "MessageDetailsContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="d-flex justify-content-center">Müşteri Yorumları</h1>
+<br />
+<br />
+
+<div class="form-group">
+    <label asp-for="Name">Ad Soyad:</label>
+    <input type="text" asp-for="Name" class="form-control" />
+</div>
+
+<div class="form-group">
+    <label asp-for="Message">Mesaj:</label>
+    <textarea asp-for="Message" class="form-control" readonly></textarea>
+</div>

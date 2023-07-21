@@ -19,13 +19,19 @@ namespace Pizzapan.PresentationLayer.Controllers
             var values = _contactService.TGetList();
             return View(values);
         }
+
+        public IActionResult MessageDetailsContact(int id)
+        {
+            var values = _contactService.TGetByID(id);
+            return View(values);
+        }
         public IActionResult DeleteContact(int id)
         {
             var value = _contactService.TGetByID(id);
             _contactService.TDelete(value);
             return RedirectToAction("Index");
         }
-        public IActionResult GetMessageByTesekkur() 
+        public IActionResult GetMessageByTesekkur()
         {
             var values = _contactService.TGetContactBySubjectWithTesekkur();
             return View(values);
