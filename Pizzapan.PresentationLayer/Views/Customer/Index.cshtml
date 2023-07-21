@@ -1,8 +1,27 @@
-﻿
+﻿@model List<Contact>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h1>Müşteri Sayfası</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Müşteri Adı</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Name</td>
+            <td>@(((DateTime)item.SendDateMessage).ToString("dd-MMM-yyyy"))</td>
+        </tr>
+    }
+</table>
 
